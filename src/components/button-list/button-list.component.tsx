@@ -1,16 +1,26 @@
 import React from "react";
-import PropTypes from "prop-types";
+import "./button-list.component.scss";
 
-export const ButtonList = (props: { skills: string[] }) => {
+export type Skill = {
+  key: string;
+  value: string;
+};
+
+type ButtonListProps = {
+  skills: Skill[];
+  onButtonClick: (skill: Skill) => void;
+};
+
+export const ButtonList = (props: ButtonListProps) => {
+  const skills: Skill[] = props.skills;
+
   return (
-    <div>
-      {props.skills.map((skill: string) => (
-        <button>{skill}</button>
+    <div className="button-list">
+      {skills.map((skill: Skill, index: number) => (
+        <button key={skill.key} className="button-item" onClick={() => props.onButtonClick(skill)}>
+          {skill.value}
+        </button>
       ))}
     </div>
   );
-};
-
-ButtonList.propTypes = {
-  skills: PropTypes.arrayOf(PropTypes.string).isRequired,
 };
