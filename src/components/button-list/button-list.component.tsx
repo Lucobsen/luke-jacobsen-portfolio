@@ -11,6 +11,11 @@ type ButtonListProps = {
   onButtonClick: (skill: Skill) => void;
 };
 
+/**
+ * Button List Component.
+ * @param props - a list of skills
+ * @returns a button list component
+ */
 export const ButtonList = (props: ButtonListProps) => {
   const skills: Skill[] = props.skills;
 
