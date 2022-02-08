@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import luke from "./luke-guitar.svg";
 import "./app.scss";
 import { ButtonList, Skill } from "./components/button-list/button-list.component";
+import { User } from "./components/user/user.component";
 
 const skillList: Skill[] = [
   {
@@ -18,6 +18,10 @@ const skillList: Skill[] = [
   },
 ];
 
+/**
+ * Main App Component.
+ * @returns the main App
+ */
 export const App = () => {
   const [skills, setSkills] = useState<Skill[]>(skillList);
   const [selectedSkill, setSelectedSkill] = useState<Skill | null>(null);
@@ -29,9 +33,7 @@ export const App = () => {
   return (
     <div className="app-container">
       <header className="app-header">
-        <img src={luke} className="app-logo" alt="luke" />
-
-        <p style={{ marginBottom: 0 }}>Luke Jacobsen</p>
+        <User />
 
         <ButtonList skills={skills} onButtonClick={handleClick} />
       </header>
