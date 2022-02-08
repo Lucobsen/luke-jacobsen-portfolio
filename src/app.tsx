@@ -25,15 +25,18 @@ const skillList: Skill[] = [
 export const App = () => {
   const [skills, setSkills] = useState<Skill[]>(skillList);
   const [selectedSkill, setSelectedSkill] = useState<Skill | null>(null);
+  const [imagePosition, setImagePosition] = useState<string>("");
 
   const handleClick = (skill: Skill) => {
     setSelectedSkill(skill);
+
+    setImagePosition("left");
   };
 
   return (
     <div className="app-container">
       <header className="app-header">
-        <User />
+        <User imagePosition={imagePosition} />
 
         <ButtonList skills={skills} onButtonClick={handleClick} />
       </header>
