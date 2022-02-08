@@ -1,0 +1,17 @@
+.button-list {
+  .button-item {
+    background: none;
+    border: none;
+    margin: 0 10px;
+    padding: 0;
+    color: white;
+    font-size: inherit;
+    font-family: inherit;
+    cursor: pointer;
+    text-decoration: underline;
+
+    &:hover {
+      color: lightskyblue;
+    }
+  }
+}
