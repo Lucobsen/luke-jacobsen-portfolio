@@ -1,26 +1,21 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import luke from "./luke-guitar.svg";
+import "./app.scss";
+import { ButtonList } from "./components/button-list/button-list.component";
 
-function App() {
+const skillList: string[] = ["developer", "musician", "dungeon-master"];
+
+export const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div className="app-container">
+      <header className="app-header">
+        <img src={luke} className="app-logo" alt="luke" />
+
+        <p style={{ marginBottom: 0 }}>Luke Jacobsen</p>
+        <p style={{ marginTop: 0 }}>Developer, Musician, Master</p>
+
+        <ButtonList skills={skillList} />
       </header>
     </div>
   );
-}
-
-export default App;
+};
