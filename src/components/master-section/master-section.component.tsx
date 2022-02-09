@@ -1,10 +1,22 @@
-import React, { useState } from "react";
+import React from "react";
 import { Container } from "../container/container.component";
 
 const masterData = {
   id: "campaigns",
   title: "Campaigns",
-  content: ["Amsterdam D&D", "The Gregorians", "The Murder HOBOs"],
+  content: [
+    {
+      myTitle: "Software Engineer",
+      mainTitle: "Project Central",
+      description: [
+        "Ported the product's codebase from Aurelia to Angular.",
+        "Developed the product from MVP to a full subscription based model.",
+        "Integrated the product with Microsoft 365 Integrations (Teams, Outlook, Sharepoint).",
+        "Refined User Stories before they were added to Sprints.",
+        "Partook in Monthly Company Meetings.",
+      ],
+    },
+  ],
 };
 
 /**
@@ -12,12 +24,9 @@ const masterData = {
  * @returns
  */
 export const MasterSection = () => {
-  const [sectionTitle, setSectionTitle] = useState(masterData.title);
-  const [sectionContent, setSectionContent] = useState(masterData.content);
-
   return (
     <div>
-      <Container title={sectionTitle} content={sectionContent} />
+      <Container title={masterData.title} content={masterData.content} />
     </div>
   );
 };
