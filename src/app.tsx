@@ -1,6 +1,10 @@
 import React, { useState } from "react";
 import "./app.scss";
 import { ButtonList, ButtonListView, Skill } from "./components/button-list/button-list.component";
+import { Container } from "./components/container/container.component";
+import { DeveloperSection } from "./components/developer-section/developer-section.component";
+import { MasterSection } from "./components/master-section/master-section.component";
+import { MusicianSection } from "./components/musician-section/musician-section.component";
 import { User } from "./components/user/user.component";
 
 const skillList: Skill[] = [
@@ -24,13 +28,13 @@ const skillList: Skill[] = [
  */
 export const App = () => {
   const [skills, setSkills] = useState<Skill[]>(skillList);
-  const [selectedSkill, setSelectedSkill] = useState<Skill | null>(null);
+  const [selectedSkill, setSelectedSkill] = useState<string | null>(null);
   const [imagePosition, setImagePosition] = useState<string>("");
 
-  const handleClick = (skill: Skill | null) => {
-    setSelectedSkill(skill);
+  const handleClick = (skillKey: string | null) => {
+    setSelectedSkill(skillKey);
 
-    const imagePosition: string = skill ? "left" : "";
+    const imagePosition: string = skillKey ? "left" : "";
 
     setImagePosition(imagePosition);
   };
@@ -44,6 +48,10 @@ export const App = () => {
         listView={selectedSkill ? ButtonListView.Vertical : ButtonListView.Horizontal}
         onButtonClick={handleClick}
       />
+
+      {selectedSkill === skills[0].key ? <DeveloperSection /> : null}
+      {selectedSkill === skills[1].key ? <MusicianSection /> : null}
+      {selectedSkill === skills[2].key ? <MasterSection /> : null}
     </div>
   );
 };

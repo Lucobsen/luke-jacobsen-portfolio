@@ -1,8 +1,9 @@
 .user-image {
   height: 40vmin;
-  border: white 3px solid;
+  border: black 3px solid;
   border-radius: 50%;
   transition: all 1s ease;
+  box-shadow: 0 3px 10px white;
 
   &.left {
     position: absolute;
