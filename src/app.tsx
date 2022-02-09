@@ -37,15 +37,13 @@ export const App = () => {
 
   return (
     <div className="app-container">
-      <header className="app-header">
-        <User imagePosition={imagePosition} onImageClick={handleClick} />
+      <User imagePosition={imagePosition} onImageClick={handleClick} />
 
-        <ButtonList
-          skills={skills}
-          listView={selectedSkill ? ButtonListView.Vertical : ButtonListView.Horizontal}
-          onButtonClick={handleClick}
-        />
-      </header>
+      <ButtonList
+        skills={skills}
+        listView={selectedSkill ? ButtonListView.Vertical : ButtonListView.Horizontal}
+        onButtonClick={handleClick}
+      />
     </div>
   );
 };

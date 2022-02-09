@@ -2,12 +2,18 @@
   height: 40vmin;
   border: white 3px solid;
   border-radius: 50%;
+  transition: all 1s ease;
 
   &.left {
     position: absolute;
     left: 60px;
     top: 50px;
-    transition: all 2s ease;
     cursor: pointer;
+
+    &:hover {
+      height: 42vmin;
+      left: 55px;
+      border-color: lightskyblue;
+    }
   }
 }
