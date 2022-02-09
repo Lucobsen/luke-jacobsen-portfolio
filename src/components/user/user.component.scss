@@ -1,6 +1,5 @@
 .user-image {
   height: 40vmin;
-  pointer-events: none;
   border: white 3px solid;
   border-radius: 50%;
 
@@ -8,6 +7,7 @@
     position: absolute;
     left: 60px;
     top: 50px;
-    transition: all 1s ease;
+    transition: all 2s ease;
+    cursor: pointer;
   }
 }

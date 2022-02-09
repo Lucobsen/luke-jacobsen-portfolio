@@ -1,5 +1,16 @@
 .button-list {
+  display: flex;
+
+  &.horizontal {
+    flex-direction: row;
+  }
+
+  &.vertical {
+    flex-direction: column;
+  }
+
   .button-item {
+    display: flex;
     background: none;
     border: none;
     margin: 0 10px;
