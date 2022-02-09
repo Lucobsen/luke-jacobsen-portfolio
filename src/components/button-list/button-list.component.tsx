@@ -14,7 +14,7 @@ export enum ButtonListView {
 type ButtonListProps = {
   skills: Skill[];
   listView: ButtonListView;
-  onButtonClick: (skill: Skill) => void;
+  onButtonClick: (skillKey: string) => void;
 };
 
 /**
@@ -28,7 +28,7 @@ export const ButtonList = (props: ButtonListProps) => {
   return (
     <div className={`button-list ${props.listView}`}>
       {skills.map((skill: Skill, index: number) => (
-        <button key={skill.key} className="button-item" onClick={() => props.onButtonClick(skill)}>
+        <button key={skill.key} className="button-item" onClick={() => props.onButtonClick(skill.key)}>
           {skill.value}
         </button>
       ))}
