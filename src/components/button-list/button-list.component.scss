@@ -7,6 +7,10 @@
 
   &.vertical {
     flex-direction: column;
+    position: absolute;
+    align-items: center;
+    left: 70px;
+    bottom: 250px;
   }
 
   .button-item {
