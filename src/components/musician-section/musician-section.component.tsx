@@ -30,13 +30,13 @@ const musicianData = {
 };
 
 /**
- *
- * @returns
+ * Musician Section.
+ * @returns hobby (musician) component
  */
 export const MusicianSection = () => {
   return (
     <div>
-      <Container title={musicianData.title} content={musicianData.content} />
+      <Container id={musicianData.id} title={musicianData.title} content={musicianData.content} />
     </div>
   );
 };
