@@ -1,6 +1,6 @@
 .main-container {
   min-width: 300px;
-  max-width: 420px;
+  max-width: 500px;
   background-color: white;
   max-height: 80vh;
   border: black 3px solid;
@@ -38,7 +38,7 @@
   .container-content-list {
     text-align: start;
     margin: 0 0 20px 0;
-    font-size: 16px;
+    font-size: calc(10px + 1vmin);
     font-weight: bold;
   }
 }
