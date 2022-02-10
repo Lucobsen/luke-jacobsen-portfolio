@@ -9,7 +9,8 @@ export type Content = {
   endDate?: Date;
 };
 
-type ContainerProps = {
+export type ContainerProps = {
+  id: string;
   title: string;
   content: Content[];
 };
@@ -22,14 +23,16 @@ export const Container = (props: ContainerProps) => {
   const contentList: Content[] = props.content;
 
   return (
-    <div className="main-container">
+    <div key={props.id} className="main-container">
       <h2 className="container-title">{props.title}</h2>
 
       {contentList.map((content: Content, sectionIndex: number) => (
         <section key={sectionIndex}>
-          <div className="container-main-content-header">
-            <h4 className="container-main-content-title">{content.mainTitle}</h4>
-            <h6 className="container-main-content-dates">
+          {content.myTitle ? <h4 className="container-content-my-title">{content.myTitle}</h4> : null}
+
+          <div className="container-content-header">
+            <h5 className="container-content-title">{content.mainTitle}</h5>
+            <h6 className="container-content-dates">
               {content.startDate?.toLocaleDateString("en-GB", { month: "long", year: "numeric" })}
             </h6>
           </div>

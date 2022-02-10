@@ -20,13 +20,13 @@ const masterData = {
 };
 
 /**
- *
- * @returns
+ * Dungeon Master Section.
+ * @returns hobby (dungeon master) component
  */
 export const MasterSection = () => {
   return (
     <div>
-      <Container title={masterData.title} content={masterData.content} />
+      <Container id={masterData.id} title={masterData.title} content={masterData.content} />
     </div>
   );
 };
