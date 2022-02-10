@@ -7,8 +7,8 @@ export type Skill = {
 };
 
 export enum ButtonListView {
-  Horizontal = "horizontal",
-  Vertical = "vertical",
+  Center = "center",
+  Top = "top",
 }
 
 type ButtonListProps = {

@@ -1,16 +1,14 @@
 .button-list {
   display: flex;
+  flex-direction: row;
 
-  &.horizontal {
-    flex-direction: row;
+  &.center {
   }
 
-  &.vertical {
-    flex-direction: column;
+  &.top {
     position: absolute;
     align-items: center;
-    left: 70px;
-    bottom: 250px;
+    top: 10px;
   }
 
   .button-item {
