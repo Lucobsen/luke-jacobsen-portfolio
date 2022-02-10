@@ -4,17 +4,4 @@
   border-radius: 50%;
   transition: all 1s ease;
   box-shadow: 0 3px 10px white;
-
-  &.left {
-    position: absolute;
-    left: 60px;
-    top: 50px;
-    cursor: pointer;
-
-    &:hover {
-      height: 42vmin;
-      left: 55px;
-      border-color: lightskyblue;
-    }
-  }
 }

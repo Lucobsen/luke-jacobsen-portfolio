@@ -41,11 +41,11 @@ export const App = () => {
 
   return (
     <div className="app-container">
-      <User imagePosition={imagePosition} onImageClick={handleClick} />
+      {selectedSkill ? null : <User imagePosition={imagePosition} onImageClick={handleClick} />}
 
       <ButtonList
         skills={skills}
-        listView={selectedSkill ? ButtonListView.Vertical : ButtonListView.Horizontal}
+        listView={selectedSkill ? ButtonListView.Top : ButtonListView.Center}
         onButtonClick={handleClick}
       />
 
